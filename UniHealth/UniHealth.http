@@ -1,0 +1,6 @@
+@UniHealth_HostAddress = http://localhost:5155
+
+GET {{UniHealth_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
