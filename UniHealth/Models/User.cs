@@ -18,7 +18,6 @@ namespace UniHealth.Models
         [MaxLength(100)]
         public string phoneNumber { get; set; }
 
-        [MaxLength(100)]
         public string imageUrl { get; set; }
         
         [MaxLength(100)]
