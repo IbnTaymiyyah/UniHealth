@@ -4,10 +4,10 @@ namespace UniHealth.DTO
 {
     public class CreateMedicalRecordDto
     {
-        [Required]
+        [Required(ErrorMessage = " مطلوب")]  
         public int UserId { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = " مطلوب")]
         public int HasSickness { get; set; }
 
         public string ImageUrl { get; set; }
