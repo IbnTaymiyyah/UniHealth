@@ -4,13 +4,14 @@ namespace UniHealth.DTO
 {
     public class ChangePasswordDto
     {
-        [Required , DataType(DataType.Password)]
+        
+        [Required(ErrorMessage = " مطلوب"), DataType(DataType.Password)]
         public string CurrentPassword { get; set; }
         
-        [Required , DataType(DataType.Password)]
+        [Required(ErrorMessage = " مطلوب"), DataType(DataType.Password)]
         public string NewPassword { get; set; }
 
-        [Compare("NewPassword")]
+        [Compare("NewPassword", ErrorMessage = "كلمة المرور غير متطابقة")]
         public string ConfirmNewPassword { get; set; }
 
     }
