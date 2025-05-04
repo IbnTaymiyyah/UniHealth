@@ -4,10 +4,10 @@ namespace UniHealth.DTO
 {
     public class UpdateStudentDetailDto
     {
-        [Required]
+        [Required(ErrorMessage = " مطلوب")]
         public int CollegeId { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = " مطلوب")]
         public int UniversityId { get; set; }
     }
 }
