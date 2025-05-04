@@ -4,8 +4,8 @@ namespace UniHealth.DTO
 {
     public class UpdateCollegeDto
     {
-        [Required]
-        [MaxLength(100)]
+        [Required(ErrorMessage = " مطلوب")]
+        [MaxLength(100, ErrorMessage = "يجب ألا يتجاوز الاسم 100 حرف")]
         public string Name { get; set; }
     }
 }
