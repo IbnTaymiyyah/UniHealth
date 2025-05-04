@@ -4,7 +4,7 @@ namespace UniHealth.DTO
 {
     public class UpdateMedicalRecordDto
     {
-        [Required]
+        [Required(ErrorMessage = " مطلوب")]
         public int HasSickness { get; set; }
 
         public string ImageUrl { get; set; }
