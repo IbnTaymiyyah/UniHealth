@@ -6,7 +6,7 @@ namespace UniHealth.DTO
     {
 
 
-        [Required]
+        [Required(ErrorMessage = " مطلوب")]
         public int UniversityId { get; set; }
     }
 }
