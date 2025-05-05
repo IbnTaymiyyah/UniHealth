@@ -14,7 +14,7 @@ namespace UniHealth.Models
         
         [ForeignKey("Univeristy")]
         public int UniveristyId { get; set; }
-        public Univeristy Univeristy { get; set; }
+        public University Univeristy { get; set; }
         
         [ForeignKey("College")]
         public int CollegeId { get; set; }
