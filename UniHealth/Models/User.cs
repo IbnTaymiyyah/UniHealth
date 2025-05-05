@@ -7,23 +7,29 @@ namespace UniHealth.Models
     {
         public int Id { get; set; }
 
-        [Required]
-        [MaxLength(100)]
+        [Required(ErrorMessage = " مطلوب")]
+        [MaxLength(100, ErrorMessage = "يجب ألا يتجاوز الاسم 100 حرف")]
         public string FName { get; set; }
 
-        [Required]
-        [MaxLength(100)]
+        [Required(ErrorMessage = " مطلوب")]
+        [MaxLength(100, ErrorMessage = "يجب ألا يتجاوز الاسم 100 حرف")]
         public string LName { get; set; }
 
-        [MaxLength(100)]
+        [Required(ErrorMessage = "البريد الإلكتروني مطلوب")]
+        [EmailAddress(ErrorMessage = "البريد الإلكتروني غير صحيح")]
+        public string Email { get; set; }
+
+        [Required(ErrorMessage = " مطلوب")]
+        [MaxLength(20, ErrorMessage = "يجب ألا يتجاوز الاسم 20 رقم")]
         public string phoneNumber { get; set; }
 
         public string imageUrl { get; set; }
-        
-        [MaxLength(100)]
+
+        [Required(ErrorMessage = " مطلوب")]
+        [RegularExpression(@"^[a-zA-Zء-ي\s]+$", ErrorMessage = "يجب أن يحتوي الاسم على أحرف فقط")]
         public string userName { get; set; }
 
-        [MaxLength(100)]
+        [Required(ErrorMessage = " مطلوب"), DataType(DataType.Password)]
         public string password { get; set; }
 
         [ForeignKey("Role")]
