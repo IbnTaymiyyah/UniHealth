@@ -5,7 +5,7 @@ namespace UniHealth.DTO.Academic.StudentDetail
     public class CreateStudentDetailDto
     {
         [Required(ErrorMessage = " مطلوب")]
-        public int UserId { get; set; }
+        public string UserId { get; set; }
 
         [Required(ErrorMessage = " مطلوب")]
         public int CollegeId { get; set; }
