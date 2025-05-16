@@ -28,14 +28,12 @@ namespace UniHealth.DTO.Auth
         public string Password { get; set; }
 
 
-        [Required(ErrorMessage = "مطلوب")]
-        public string DoctorUniversityId { get; set; }
+       
+        public string? DoctorUniversityId { get; set; }
 
 
-        [Required(ErrorMessage = " مطلوب")]
-        public int RoleId { get; set; }
 
-        public string ProfileImageUrl { get; set; }
-        public string ImageUrl { get; set; }
+        public string? ProfileImageUrl { get; set; } = string.Empty;
+        public string? ImageUrl { get; set; } = string.Empty;
     }
 }
