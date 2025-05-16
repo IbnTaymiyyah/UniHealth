@@ -56,7 +56,7 @@ namespace UniHealth.Controllers.Auth
                 
                 user.FName = updateUserDto.FirstName;
                 user.LName = updateUserDto.LastName;
-                user.PhoneNumber = updateUserDto.PhoneNumber;
+                user.PhoneNumber = updateUserDto.PhoneNumber ?? "";
                 user.ProfileImageUrl = updateUserDto.ProfileImageUrl ?? user.ProfileImageUrl;
                 user.imageUrl = updateUserDto.ImageUrl ?? user.imageUrl;
 
