@@ -6,11 +6,11 @@ namespace UniHealth.DTO.Auth
     {
         [Required(ErrorMessage = " مطلوب")]
         [MaxLength(100, ErrorMessage = "يجب ألا يتجاوز الاسم 100 حرف")]
-        public string FName { get; set; }
+        public string FirstName { get; set; }
 
         [Required(ErrorMessage = " مطلوب")]
         [MaxLength(100, ErrorMessage = "يجب ألا يتجاوز الاسم 100 حرف")]
-        public string LName { get; set; }
+        public string LastName { get; set; }
 
         [Required(ErrorMessage = "البريد الإلكتروني مطلوب")]
         [EmailAddress(ErrorMessage = "البريد الإلكتروني غير صحيح")]
@@ -28,10 +28,14 @@ namespace UniHealth.DTO.Auth
         public string Password { get; set; }
 
 
+        [Required(ErrorMessage = "مطلوب")]
+        public string DoctorUniversityId { get; set; }
+
+
         [Required(ErrorMessage = " مطلوب")]
         public int RoleId { get; set; }
 
-      
+        public string ProfileImageUrl { get; set; }
         public string ImageUrl { get; set; }
     }
 }
