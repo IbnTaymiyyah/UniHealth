@@ -102,8 +102,10 @@ namespace UniHealth.Controllers.Auth
         {
             try
             {
-               
-                
+
+                if (string.IsNullOrEmpty(userDto.DoctorUniversityId))
+                    return APIResponse.Fail(new List<string> { "الرقم الجامعي للطبيب مطلوب" });
+
                 var universityId = await _context.DoctorIds
                     .FirstOrDefaultAsync(d => d.DoctorUniversityId == userDto.DoctorUniversityId &&
                                              !d.IsUsed);
