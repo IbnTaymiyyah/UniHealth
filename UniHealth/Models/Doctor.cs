@@ -10,12 +10,13 @@ namespace UniHealth.Models
         public int Id { get; set; }
 
 
+
         [ForeignKey("User")]
-        public int UserId { get; set; }
-        public User User { get; set; }
+        public string UserId { get; set; }
+        public virtual User User { get; set; }
         
         [ForeignKey("University")]
         public int UniversityId { get; set; }
-        public University University { get; set; }
+        public virtual University University { get; set; }
     }
 }
