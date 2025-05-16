@@ -50,9 +50,7 @@ namespace UniHealth.Controllers.Auth
         {
             try
             {
-                if (userDto.RoleId != 1)
-                    return APIResponse.Fail(new List<string> { "يمكن التسجيل كطالب فقط من هذه الواجهة" });
-
+               
                 var userExists = await _userManager.Users.AnyAsync(u => u.UserName == userDto.Username || u.Email == userDto.Email);
                 if (userExists)
                     return APIResponse.Fail(new List<string> { "اسم المستخدم أو البريد الإلكتروني مسجل مسبقًا" });
@@ -63,7 +61,8 @@ namespace UniHealth.Controllers.Auth
                     Email = userDto.Email,
                     FName = userDto.FirstName,
                     LName = userDto.LastName,
-                    RoleId = userDto.RoleId,
+                    PhoneNumber = userDto.PhoneNumber,
+                    RoleId = 1,
                     ProfileImageUrl = userDto.ProfileImageUrl
                 };
 
@@ -103,9 +102,7 @@ namespace UniHealth.Controllers.Auth
         {
             try
             {
-                if (userDto.RoleId != 2)
-                    return APIResponse.Fail(new List<string> { "يمكن التسجيل كطبيب فقط من هذه الواجهة" });
-
+               
                 
                 var universityId = await _context.DoctorIds
                     .FirstOrDefaultAsync(d => d.DoctorUniversityId == userDto.DoctorUniversityId &&
@@ -124,7 +121,8 @@ namespace UniHealth.Controllers.Auth
                     Email = userDto.Email,
                     FName = userDto.FirstName,
                     LName = userDto.LastName,
-                    RoleId = userDto.RoleId,
+                    PhoneNumber = userDto.PhoneNumber,
+                    RoleId = 2,
                     ProfileImageUrl = userDto.ProfileImageUrl
                 };
 
