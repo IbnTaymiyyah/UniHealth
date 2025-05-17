@@ -48,7 +48,7 @@ namespace UniHealth.Controllers.Medical
         }
 
         // Get Report by ID
-        [HttpGet("Get-Report-By-Id , {id}")]
+        [HttpGet("Get-Report-By-Id/{id}")]
         public async Task<APIResponse> GetReportById(int id)
         {
             try
@@ -118,7 +118,7 @@ namespace UniHealth.Controllers.Medical
 
         // Update Report 
         [Authorize(Roles = "Doctor")]
-        [HttpPut("Update-Report-Info , {id}")]
+        [HttpPut("Update-Report/{id}")]
         public async Task<APIResponse> UpdateReport(int id, [FromBody] UpdateReportDto updateDto)
         {
             using var transaction = await _db.Database.BeginTransactionAsync();
@@ -145,7 +145,7 @@ namespace UniHealth.Controllers.Medical
         }
 
         // Remove Report 
-        [HttpDelete("Remove-Report , {id}")]
+        [HttpDelete("Remove-Report/{id}")]
         public async Task<APIResponse> DeleteReport(int id)
         {
             using var transaction = await _db.Database.BeginTransactionAsync();
