@@ -44,7 +44,7 @@ namespace UniHealth.Controllers.Academic
         }
 
         // Get College By Id
-        [HttpGet("{id} ,Get-College-By-Id")]
+        [HttpGet("Get-College-By-Id/{id}")]
         public async Task<APIResponse> GetCollegeById(int id)
         {
             try
@@ -88,7 +88,7 @@ namespace UniHealth.Controllers.Academic
         }
 
         // Update College Info
-        [HttpPut("{id},Update-College-Info")]
+        [HttpPut("Update-College-Info/{id}")]
         public async Task<APIResponse> UpdateCollege(int id, [FromBody] UpdateCollegeDto updateCollegeDto)
         {
             try
@@ -120,7 +120,7 @@ namespace UniHealth.Controllers.Academic
         }
 
         // Remove College
-        [HttpDelete("{id},Remove-College-By-Id")]
+        [HttpDelete("Remove-College/{id}")]
         public async Task<APIResponse> DeleteCollege(int id)
         {
             try
