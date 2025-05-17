@@ -62,7 +62,7 @@ namespace UniHealth.Controllers.Academic
         }
 
         // Get Student By Id
-        [HttpGet("{id} , Get-Student-By-Id")]
+        [HttpGet("Get-Student-By-Id/{id}")]
         public async Task<APIResponse> GetStudentById(int id)
         {
             try
@@ -147,8 +147,8 @@ namespace UniHealth.Controllers.Academic
         }
 
         // Update Student Info
-        
-        [HttpPut("{id}, Update-Student-Info")]
+
+        [HttpPut("Update-Student-Info/{id}")]
         public async Task<APIResponse> UpdateStudentDetail(int id, [FromBody] UpdateStudentDetailDto updateDto)
         {
             using var transaction = await _db.Database.BeginTransactionAsync();
@@ -183,8 +183,8 @@ namespace UniHealth.Controllers.Academic
         }
 
         // Remove Student By Id
-        
-        [HttpDelete("{id}, Remove-Student-By-Id")]
+
+        [HttpDelete("Remove-Student-By-Id/{id}")]
         public async Task<APIResponse> DeleteStudentDetail(int id)
         {
             using var transaction = await _db.Database.BeginTransactionAsync();
