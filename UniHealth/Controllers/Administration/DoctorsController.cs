@@ -46,7 +46,7 @@ namespace UniHealth.Controllers.Administration
         }
 
         // Get Doctor by ID
-        [HttpGet("Get-Doctor-By-Id , {id}")]
+        [HttpGet("Get-Doctor-By-Id/{id}")]
         public async Task<APIResponse> GetDoctorById(int id)
         {
             try
@@ -106,7 +106,7 @@ namespace UniHealth.Controllers.Administration
         }
 
         // Update Doctor university By Id
-        [HttpPut("Update-Doctor-University , {id}")]
+        [HttpPut("Update-Doctor/{id}")]
         public async Task<APIResponse> UpdateDoctor(int id, [FromBody] UpdateDoctorDTO updateDto)
         {
             try
@@ -134,7 +134,7 @@ namespace UniHealth.Controllers.Administration
         }
 
         // Remnove Doctor 
-        [HttpDelete("Remove-Doctor-By-Id, {id}")]
+        [HttpDelete("Remove-Doctor/{id}")]
         public async Task<APIResponse> DeleteDoctor(int id)
         {
             try
