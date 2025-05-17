@@ -44,7 +44,7 @@ namespace UniHealth.Controllers.Medical
         }
 
         // Get Medical record by ID
-        [HttpGet("Get-Mediacl-By-Id , {id}")]
+        [HttpGet("Get-Medical-Record-By-Id/{id}")]
         public async Task<APIResponse> GetMedicalRecordById(int id)
         {
             try
@@ -96,7 +96,7 @@ namespace UniHealth.Controllers.Medical
         }
 
         // Update Medical record
-        [HttpPut("Udpate-Medical-Info , {id}")]
+        [HttpPut("Update-Medical-Record/{id}")]
         public async Task<APIResponse> UpdateMedicalRecord(int id, [FromBody] UpdateMedicalRecordDto updateDto)
         {
             using var transaction = await _db.Database.BeginTransactionAsync();
@@ -123,7 +123,7 @@ namespace UniHealth.Controllers.Medical
         }
 
         // Delete medical record
-        [HttpDelete("Remove-Medical , {id}")]
+        [HttpDelete("Remove-Medical-Record/{id}")]
         public async Task<APIResponse> DeleteMedicalRecord(int id)
         {
             using var transaction = await _db.Database.BeginTransactionAsync();
