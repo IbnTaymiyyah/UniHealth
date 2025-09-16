@@ -1,4 +1,5 @@
 # UniHealth
+### Test End-Points : https://universitycaresystem.runasp.net/swagger
 
 ---
  ## All Api's
