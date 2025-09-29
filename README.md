@@ -1,7 +1,7 @@
 # 🏥 UniHealth – University Healthcare Management API
 
 **UniHealth** is an open-source backend system that digitizes medical care inside universities.  
-It connects students, doctors, and administrators through a secure, well-documented REST API built on `.NET Framework 4.8`, `JWT`, and `SQL Server`.
+It connects students, doctors, and administrators through a secure, well-documented REST API built on `.NET Framework 9`, `JWT`, and `SQL Server`.
 
 
 ![AllApis](https://github.com/user-attachments/assets/a4f27394-d452-48fe-b266-6cd6581fdb33)
